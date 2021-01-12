@@ -3,4 +3,5 @@
 - unsigned es para que el número no tenga signo
 - un casteo es una conversion de tipo
 - static_cast<tipo de valor a convertir>(valor);
-- eso muestra el valor en la tabla ascii
+- eso muestra el valor en la tabla asciis
+- Hacer para mañana los ejercicios del capitulo 2 del libro:desde el 16 hasta el final 
