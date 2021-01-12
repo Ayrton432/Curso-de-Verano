@@ -1,1 +1,6 @@
-soy el admin
+- la función size of() retorna el tamaño de la variable en la memora
+- /**/ comentario de varias líneas
+- unsigned es para que el número no tenga signo
+- un casteo es una conversion de tipo
+- static_cast<tipo de valor a convertir>(valor);
+- eso muestra el valor en la tabla ascii
