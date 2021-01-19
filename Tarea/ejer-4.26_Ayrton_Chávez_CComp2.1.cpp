@@ -4,17 +4,19 @@ using namespace std ;
 
 int main ()
 {
-   int n ;
-   char Simbolo = ' * ' ;
+   short n ;
    
-   cout << " Introduzca un numero : " << endl;
+   cout << " Introduzca el valor del lado : " << endl;
    cin >> n ;
    
-   for (int j = 0; j < n ; ++j) {
-      for (int i = 0; i < n ; ++i) {
-         cout << Simbolo;
-      }
+   for (int i = 0; i < n ; i++) {
+   		for (int j = 0; j < n ; j++) {
+    		if (i == 0 || j == 0 || i == n - 1 || j == n - 1 )
+         		cout << "*";
+      		else
+    			cout << " ";
+    	}
       cout << endl;
-   }
+	}
    return 0;
 }

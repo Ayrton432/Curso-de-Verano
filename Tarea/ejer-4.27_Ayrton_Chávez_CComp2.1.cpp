@@ -4,25 +4,24 @@ using namespace std;
 
 int main() {
 
-    int numero,p,s,t,c,m;
+    int num,p,s,c,m;
 	
 	cout << "ingrese un numero: " << endl;;
 
-	cin >> numero;
+	cin >> num;
 
-	p = numero%10;
+	p = num % 10;
 
-	s = p/10;
+	s = p / 10;
 
-	c = s/10;
-
-	m = p*100+t*10+c;
-
-	if (m = numero)
-		cout<< "El Numero es Palindromo\n";
+	c = s / 10;
 	
+	m = p * 100 + s * 10 + c;
+
+	if (m = num)
+		cout << "El numero es Palindromo" << endl;
 	else
-		cout<< "El Numero no es Palindromo\n";
+		cout << "El numero no es Palindromo" << endl;
 	
 
 	return 0;
