@@ -1,6 +1,8 @@
 #include<iostream>
+
 using namespace std;
-void display(int *array, int size) {
+
+void print(int *array, int size) {
    for(int i = 0; i < size; i++)
     	cout << array[i] << " ";
 	cout << endl;
@@ -27,9 +29,9 @@ int main() {
    for(int i = 0; i<n; i++) {
       cin >> arr[i];
    }
-   cout << "Matriz antes de ser ordenada: ";
-   display(arr, n);
+   cout << "\nMatriz antes de ser ordenada: ";
+   print(arr, n);
    insertionSort(arr, n);
-   cout << "Matriz despues de ser ordenada: ";
-   display(arr, n);
+   cout << "\nMatriz despues de ser ordenada: ";
+   print(arr, n);
 }

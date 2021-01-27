@@ -1,33 +1,29 @@
 #include <iostream>
 using namespace std;
 
-
 int main( void )
 {
 	const int max = 20;  
 	int a[max] = {0}; 
-    int i; 
-    int j; 
-    int k = 0; 
-    int duplicate; 
-    int value; 
+    int i, j, k = 0;  
+    int duplicado, val;  
 
     cout << "Ingrese 20 numeros que esten entre el 10 y el 100" << endl;
     for ( i = 0; i <= max - 1; i++ ) {
-        duplicate = 0;
-        cin >> value;
+        duplicado = 0;
+        cin >> val;
 
          
-		if ( value >= 10 && value <= 100 ) {
+		if ( val >= 10 && val <= 100 ) {
             for ( j = 0; j < k; j++ ) {
-            	if ( value == a[j] ) {
-                	duplicate = 1;
+            	if ( val == a[j] ) {
+                	duplicado = 1;
 					cout << "Numero duplicado";
                 	break;
             	} 
         	} 
-            if ( !duplicate ) {
-		    	a[k++]  = value;
+            if ( !duplicado ) {
+		    	a[k++]  = val;
             } 
 		} 
 		else

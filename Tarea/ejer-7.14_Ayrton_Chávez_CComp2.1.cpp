@@ -5,26 +5,26 @@ using namespace std;
 
 int main() {
 	const size_t tam = 20; 
-	vector< int > v;
+	vector < int > v;
 	size_t subscript = 0;
-	bool duplicate = false;
+	bool duplicado = false;
 	cout << "Ingrese 20 numeros que esten entre el 10 y el 100: " << endl;
  
-	unsigned int i = 0;
+	int i = 0;
 
 	while (i <= tam) {
-		duplicate = false;
-		int value = 0;
-		cin >> value;
-		if ( value >= 10 && value <= 100 ) {
+		duplicado = false;
+		int valor = 0;
+		cin >> valor;
+		if ( valor >= 10 && valor <= 100 ) {
 			for ( unsigned int j = 0; j < v.size(); ++j ) {
-				if ( value == v[j] ) {
-					duplicate = true;
+				if ( valor == v[j] ) {
+					duplicado = true;
 					break;
 				} 
 			} 
-			if ( !duplicate ) {
-				v.push_back( value );
+			if ( !duplicado ) {
+				v.push_back(valor);
 				++subscript;
 			}
 			else
@@ -36,7 +36,7 @@ int main() {
 	} 
 	cout << "Los numeros sin un duplicado son: ";
 	for ( size_t index = 0; index < subscript; ++index )
-		cout << v[ index ] << ' ';
+		cout << v[index] << ' ';
 		cout << endl;
 	return 0;
 } 

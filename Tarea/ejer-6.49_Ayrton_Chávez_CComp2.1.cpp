@@ -3,6 +3,7 @@ using namespace std;
 
 int tripleByValue(int num);
 void tripleByReference(int &num);
+
 int main()
 {
 	int num;
@@ -24,6 +25,7 @@ int tripleByValue(int num)
 {
 	return num * 3;
 }
+
 void tripleByReference(int &num)
 {
 	num = num * 3;

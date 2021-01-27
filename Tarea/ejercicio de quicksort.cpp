@@ -3,57 +3,51 @@
 
 using namespace std;  
   
-void swap(int* a, int* b)  
-{  
+void intercambio(int* a, int* b) {  
     int t = *a;  
     *a = *b;  
     *b = t;  
 }  
   
-int partition (int arr[], int low, int high)  
-{  
-    int pivot = arr[high];   
-    int i = (low - 1); 
+int particion(int arr[], int menor, int mayor) {  
+    int pivot = arr[mayor];   
+    int i = (menor - 1); 
   
-    for (int j = low; j <= high - 1; j++)  
-    {  
-        if (arr[j] < pivot)  
-        {  
+    for (int j = menor; j <= mayor - 1; j++) {  
+        if (arr[j] < pivot) {  
             i++; 
-            swap(&arr[i], &arr[j]);  
+            intercambio(&arr[i], &arr[j]);  
         }  
     }  
-    swap(&arr[i + 1], &arr[high]);  
+    intercambio(&arr[i + 1], &arr[mayor]);  
     return (i + 1);  
 }  
   
-void quickSort(int arr[], int low, int high)  
-{  
-    if (low < high)  
-    {  
-        int pi = partition(arr, low, high);  
-
-        quickSort(arr, low, pi - 1);  
-        quickSort(arr, pi + 1, high);  
+void quickSort(int arr[], int menor, int mayor) {  
+    if (menor < mayor) {  
+        int pi = particion(arr, menor, mayor);  
+        quickSort(arr, menor, pi - 1);  
+        quickSort(arr, pi + 1, mayor);  
     }  
 }  
   
-void printArray(int arr[], int size)  
-{  
+void printArray(int arr[], int tam) {  
     int i;  
-    for (i = 0; i < size; i++)  
+    for (i = 0; i < tam; i++)  
         cout << arr[i] << " ";  
     cout << endl;  
 }  
   
-int main()  
-{  
+int main() {  
     int arr[] = {10, 7, 8, 9, 1, 5};  
-    int n = sizeof(arr) / sizeof(arr[0]);  
+    int n = sizeof(arr) / sizeof(arr[0]);
+    
+    cout << "Matriz sin ordenar" << endl;
+	printArray(arr, n); 
     quickSort(arr, 0, n - 1);  
-    cout << "Matriz ordenada" << endl; 
+    
+    cout << "\nMatriz ordenada" << endl; 
     printArray(arr, n);  
     return 0;  
 }  
   
-
